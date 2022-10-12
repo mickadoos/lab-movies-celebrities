@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies and Celebrities</title>
+</head>
+<body>
+    <h2>Celebrities</h2>
+    <a href="/celebrities/create">Create a Celebrity</a>
+<br>
+<a href="/celebrities">Celebrities list</a>
+<br>
+<a href="/">Home</a>
+    <form action="/celebrities/create" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="occupation" name="occupation">
+    <input type="text" placeholder="catchPhrase" name="catchPhrase">
+    <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

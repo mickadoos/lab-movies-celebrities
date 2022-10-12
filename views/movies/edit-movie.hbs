@@ -1,0 +1,36 @@
+<h2>Movie Edit</h2>
+<a href="/movies/create">Create a Movie</a>
+<br>
+<a href="/movies">Movies list</a>
+<br>
+<a href="/">Home</a>
+<br>
+{{#each movie}}
+{{this.title}}
+<a href="/movies/{{this._id}}">Movie Details</a>
+<hr>
+{{/each}}
+
+<form action="movies/{{this._id}}" method="POST" >
+        <div>
+            <label for="title" class="form-label">Títol de la peli</label>
+            <input type="text" class="form-control" id="title" aria-describedby="emailHelp" name="title" value="{{title}}">
+        </div>
+        <div class="mb-3">
+            <label for="director" class="form-label">Director de la peli</label>
+            <input type="text" class="form-control" id="director" aria-describedby="emailHelp" name="director" value="{{director}}">
+        </div>
+        <div class="mb-3">
+            <label for="year" class="form-label">Any de la peli</label>
+            <input type="text" class="form-control" id="year" aria-describedby="emailHelp" name="year" value="{{year}}">
+        </div>
+        <div class="mb-3">
+            <label for="duration" class="form-label">Duració de la peli</label>
+            <input type="text" class="form-control" id="duration" aria-describedby="emailHelp" name="duration" value="{{duration}}">
+        </div>
+        <div class="mb-3">
+            <label for="rate" class="form-label">Rate de la peli</label>
+            <input type="text" class="form-control" id="rate" aria-describedby="emailHelp" name="rate" value="{{rate}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
